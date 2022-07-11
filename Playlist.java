@@ -24,8 +24,8 @@ int a = desertIslandPlaylist.indexOf("Wonderwall");
 int b = desertIslandPlaylist.indexOf("Californication");
 
 desertIslandPlaylist.set(a,"Californication");  
-desertIslandPlaylist.set(b,"Wonderwall");
-
+desertIslandPlaylist.set(b,"Wonderwall"); 
+ 
 System.out.println(desertIslandPlaylist);
 
 
