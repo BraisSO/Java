@@ -62,18 +62,19 @@ public class Tree {
 
     Tree animalTree = new Tree(animals);
 
-    // Add and remove accordingly
+    bovine.removeChild("Husky");
+    bovine.addChild("Cow");
+    marsupial.addChild("Kangaroo");
 
 
     animalTree.print();
 
     System.out.println("Printing DFS Traversal:");
-    // Depth-first traversal
+    animalTree.depthFirstTraversal(animals);
 
 
     System.out.println("");
     System.out.println("Printing BFS Traversal:");
-    // Breadth-first traversal
-
+    animalTree.breadthFirstTraversal(); 
   }
 }
