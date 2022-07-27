@@ -1,0 +1,5 @@
+package com.unit_testproject8.app;
+public interface Vocabulary{
+public void addWord(String word, String meaning);
+public String getSynonym(String word);
+} 

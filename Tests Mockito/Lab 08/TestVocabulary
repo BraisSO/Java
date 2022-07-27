@@ -1,0 +1,35 @@
+package com.unit_testproject8.app;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.InjectMocks;
+import org.mockito.Mockito;
+import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Matchers.anyString;
+@ExtendWith(MockitoExtension.class)   
+class TestVocabulary {  
+@Mock
+    Vocabulary voca;
+@InjectMocks 
+    MySynonym mysyno;
+
+@Test
+public void NonVoidMethodThrowException(){ 
+try{
+    when(voca.getSynonym(anyString())).thenThrow(NullPointerException.class);
+    voca.getSynonym("word");
+    }catch(Exception e){
+        System.out.println("Exeception Occurred");
+        assertTrue(e instanceof NullPointerException);
+    }
+}
+
+@Test
+    public void VoidMethodThrowException(){
+    doThrow(new IllegalStateException("Error Occurred")).when(voca).addWord(anyString(), anyString());
+    assertThrows(IllegalStateException.class,()->voca.addWord("word","meaning"));
+}   
+}

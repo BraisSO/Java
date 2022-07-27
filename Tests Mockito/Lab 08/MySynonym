@@ -1,0 +1,14 @@
+package com.unit_testproject8.app;
+import java.util.*;
+class MySynonym  implements Vocabulary{
+ private Map<String, String> wordMap;
+ public MySynonym(){
+     wordMap=new HashMap<String, String>();
+ }
+ public void addWord(String word, String meaning) {
+     wordMap.put(word, meaning);
+ }
+ public String getSynonym(String word) {
+     return wordMap.get(word);
+ }
+}
