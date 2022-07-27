@@ -1,0 +1,5 @@
+package com.unit_testproject7.app;
+    public interface ArithmeticCal {
+    public int addnum(int num1, int num2);
+    public int subtractnum(int num1, int num2);   
+}

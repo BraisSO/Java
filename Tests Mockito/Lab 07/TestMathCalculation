@@ -1,0 +1,33 @@
+package com.unit_testproject7.app;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.mockito.InjectMocks;
+import org.mockito.Mockito;
+import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.times;
+@ExtendWith(MockitoExtension.class)   
+class TestMathCalculation {  
+@Mock
+    ArithmeticCal arithcal;
+@InjectMocks 
+    MathCalculation mathcal;
+@Test
+    public void testAdd(){      
+    when(arithcal.addnum(10,20)).thenReturn(30);  
+    assertEquals(mathcal.add(10, 20),30);  
+    verify(arithcal).addnum(10,20);
+    verify(arithcal, times(1)).addnum(10,20);
+}
+
+@Test
+    public void testSubtract(){
+    when(arithcal.subtractnum(20,10)).thenReturn(10);
+    assertEquals(mathcal.subtract(20, 10),10);    
+    verify(arithcal).subtractnum(20,10);
+    verify(arithcal, times(1)).subtractnum(20,10);
+}
+}

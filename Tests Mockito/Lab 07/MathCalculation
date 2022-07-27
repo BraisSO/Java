@@ -1,0 +1,13 @@
+package com.unit_testproject7.app;
+public class MathCalculation {
+public  ArithmeticCal arithcal;
+public MathCalculation(ArithmeticCal arithcal){
+   this.arithcal = arithcal;
+}   
+public int add(int num1, int num2){            
+   return arithcal.addnum(num1, num2);       
+}   
+public int subtract(int num1, int num2){
+   return arithcal.subtractnum(num1, num2);
+}
+}
