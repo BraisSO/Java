@@ -1,4 +1,4 @@
-package stuff;
+package LanguageFamilies;
 
 public class Language {
 	protected String name;

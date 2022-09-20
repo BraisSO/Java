@@ -1,4 +1,3 @@
-package Main;
 
 public class Droid {
     private String name;

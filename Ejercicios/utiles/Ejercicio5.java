@@ -1,4 +1,4 @@
-package utils;
+package Ejercicios.utiles;
 
 public class Ejercicio5 {
 	

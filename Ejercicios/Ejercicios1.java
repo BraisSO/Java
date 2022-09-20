@@ -1,9 +1,9 @@
-package ejercicios;
+package Ejercicios;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import utils.Ejercicio5;
+import Ejercicios.utiles.Ejercicio5;
 
 public class Ejercicios1 {
 

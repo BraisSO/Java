@@ -1,4 +1,3 @@
-package basicCalculator;
 
 public class Calculator{
 
