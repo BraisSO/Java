@@ -54,12 +54,11 @@ public class MainActivity {
   // displayQuestion(firstQuestion);
   //displayQuestionsRemaining(questions.size());
 
-
     }  
 
     // TODO #4 add chooseNewQuestion() here
    public Question chooseNewQuestion(){
-      int randomNum = generateRandomNumber(2);
+      int randomNum = generateRandomNumber(questions.size());
       currentQuestionIndex = randomNum;
       return questions.get(currentQuestionIndex);
    }
